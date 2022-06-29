@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        div > label {
+            width: 100%;
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid rgb(216, 216, 216);
+        }
+        div > label > span {
+            display: block;
+            width: 100%;
+            margin: 2px;
+        }
+        div > label > input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="colorpicker">
+            <span>Color</span>
+            <input type="color" name="colorpicker" id="colorpicker" >
+        </label>
+        <label for="rows">
+            <span>Rows</span>
+            <input type="number" name="rows" id="rows">
+        </label>
+        <label for="columns">
+            <span>Columns</span>
+            <input type="number" name="columns" id="columns">
+        </label>
+        <label for="cellsize">
+            <span>Cell size</span>
+            <input type="number" name="cellsize" id="cellsize">
+        </label>
+        <label for="new">
+            <input type="button" value="New canvas" id="new">
+        </label>
+    </div>
+
+    <canvas id="paint-canvas" width="500" height="500"></canvas>
+
+    <div>
+        <label for="save">
+            <input type="button" value="Save" id="save">
+        </label>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
